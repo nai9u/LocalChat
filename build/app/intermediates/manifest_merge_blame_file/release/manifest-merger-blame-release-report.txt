@@ -34,10 +34,10 @@
 19-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:6:9-42
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.6.0] C:\Users\naina\.gradle\caches\transforms-2\files-2.1\6f6da31ded36fd59bf0fb59f8c9437af\core-1.6.0\AndroidManifest.xml:24:18-86
-21        android:icon="@mipmap/ic_launcher"
-21-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:7:9-43
-22        android:label="local_chat" >
-22-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:5:9-35
+21        android:icon="@mipmap/local_chat"
+21-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:7:9-42
+22        android:label="LocalChat" >
+22-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:5:9-34
 23        <activity
 23-->E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:8:9-28:20
 24            android:name="com.example.local_chat.MainActivity"

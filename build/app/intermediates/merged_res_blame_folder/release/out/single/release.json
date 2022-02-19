@@ -1,15 +1,15 @@
 [
     {
-        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
+        "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\6f6da31ded36fd59bf0fb59f8c9437af\\core-1.6.0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
+        "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\layout_notification_template_part_time.xml.flat",
@@ -86,6 +86,14 @@
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\layout_notification_template_part_chronometer.xml.flat",
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\6f6da31ded36fd59bf0fb59f8c9437af\\core-1.6.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_local_chat.png.flat",
+        "source": "E:\\Flutter_tool\\projects\\local_chat\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\local_chat.png"
+    },
+    {
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\mipmap-mdpi_local_chat.png.flat",
+        "source": "E:\\Flutter_tool\\projects\\local_chat\\android\\app\\src\\main\\res\\mipmap-mdpi\\local_chat.png"
     },
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\color_common_google_signin_btn_tint.xml.flat",
@@ -180,6 +188,10 @@
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_local_chat.png.flat",
+        "source": "E:\\Flutter_tool\\projects\\local_chat\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\local_chat.png"
+    },
+    {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
@@ -206,6 +218,10 @@
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\2cd47c5e7ab28841ea7a996dbee41228\\jetified-play-services-base-17.1.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xhdpi_local_chat.png.flat",
+        "source": "E:\\Flutter_tool\\projects\\local_chat\\android\\app\\src\\main\\res\\mipmap-xhdpi\\local_chat.png"
     },
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
@@ -242,6 +258,10 @@
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable_notification_bg_low.xml.flat",
         "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\6f6da31ded36fd59bf0fb59f8c9437af\\core-1.6.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\mipmap-hdpi_local_chat.png.flat",
+        "source": "E:\\Flutter_tool\\projects\\local_chat\\android\\app\\src\\main\\res\\mipmap-hdpi\\local_chat.png"
     },
     {
         "merged": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",

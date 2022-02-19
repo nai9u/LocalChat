@@ -58,9 +58,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\na
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\naina\.gradle\caches\transforms-2\files-2.1\6f6da31ded36fd59bf0fb59f8c9437af\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:5:9-35
+		ADDED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:5:9-34
 	android:icon
-		ADDED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:7:9-42
 	android:name
 		INJECTED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml
 		ADDED from E:\Flutter_tool\projects\local_chat\android\app\src\main\AndroidManifest.xml:6:9-42

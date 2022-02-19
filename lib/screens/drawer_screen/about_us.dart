@@ -44,7 +44,7 @@ class _AboutAppState extends State<AboutApp> {
               ),
             ),
             SizedBox(height: screenHeight * 0.03),
-            const Text('Developers \n Fahim, Nainaiu, Sultan, Jamil',
+            const Text('Developers \n Nainaiu, Fahim, Jamil, Sultan, Aftab',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 15, color: Colors.black,

@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\values-pt_values-pt.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\6f6da31ded36fd59bf0fb59f8c9437af\\core-1.6.0\\res\\values-pt\\values-pt.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\values-tl_values-tl.arsc.flat",
             "map": [
                 {
@@ -67,6 +52,21 @@
                         "startOffsets": "2897",
                         "endColumns": "100",
                         "endOffsets": "2993"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\res\\merged\\release\\values-pt_values-pt.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\naina\\.gradle\\caches\\transforms-2\\files-2.1\\6f6da31ded36fd59bf0fb59f8c9437af\\core-1.6.0\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     }
                 }
             ]

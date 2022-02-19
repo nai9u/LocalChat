@@ -70,13 +70,15 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 160,
               child: Center(
                 child: Hero(
-                  tag: 'icon',
-                  child: Icon(
-                    Icons.messenger,
-                    size: 140,
-                    color: Colors.white,
+                  tag: 'title',
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      'Local Chat',
+                      style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    ),
                   ),
-                ),
+            ),
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,

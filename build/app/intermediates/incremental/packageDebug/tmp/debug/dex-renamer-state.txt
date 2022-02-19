@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Sun Feb 20 00:46:48 BDT 2022
+=======
+#Sat Feb 19 23:55:23 BDT 2022
+>>>>>>> 9e425bd918006cfb76a7072967f203de3286b2b2
 base.2=E\:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.2=classes3.dex
 base.1=E\:\\Flutter_tool\\projects\\local_chat\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex

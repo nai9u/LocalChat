@@ -1,0 +1,11 @@
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/icudtl.dat
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/flutter_windows.dll
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/NOTICES
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/packages/fluttertoast/assets/toastify.css
+E:/Flutter_tool/projects/local_chat/build/windows/runner/Debug/data/flutter_assets/packages/fluttertoast/assets/toastify.js

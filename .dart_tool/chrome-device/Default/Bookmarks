@@ -1,0 +1,144 @@
+{
+   "checksum": "c47f24e264fdf8cb1fdcd3d60645d02f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13262617049265138",
+            "guid": "69755ebd-c972-4581-8afe-a3dcd3ceac8b",
+            "id": "5",
+            "name": "Apple",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.apple.com/"
+         }, {
+            "date_added": "13262617049314143",
+            "guid": "40e11ba1-d9d2-479a-b80b-98eb48bc0af0",
+            "id": "6",
+            "name": "Bing",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.bing.com/"
+         }, {
+            "date_added": "13262617049375147",
+            "guid": "a0e0ebb4-b511-41c3-8493-70816343fe0c",
+            "id": "7",
+            "name": "Built-in Functions — Python 3.8.4rc1 documentation",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://docs.python.org/3/library/functions.html"
+         }, {
+            "date_added": "13262617049330145",
+            "guid": "310ef237-9b70-4010-8e63-2cb6fff8fb80",
+            "id": "8",
+            "name": "Google",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.google.com/?client=safari&channel=iphone_bm"
+         }, {
+            "date_added": "13262617049390149",
+            "guid": "5cde25ab-402d-4ede-95fd-23432e3f5db9",
+            "id": "9",
+            "name": "Python Archives - Genial Code",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://genial-code.com/category/python-2/"
+         }, {
+            "date_added": "13262617049406150",
+            "guid": "9b8fe288-dc53-4ac3-8a3a-ba878ea6007c",
+            "id": "10",
+            "name": "Self-Driving Cars Tutorial- Identify Lane Lines with OpenCV & Python - Rayan Slim - Skillshare",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.skillshare.com/classes/Self-Driving-Cars-Tutorial-Identify-Lane-Lines-with-OpenCV-Python/1987379716"
+         }, {
+            "date_added": "13262617049431151",
+            "guid": "40c7bcee-2707-4f67-a5e5-f967afc63233",
+            "id": "11",
+            "name": "Setting up Raspbian (and DOOM!) - learn.sparkfun.com",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://learn.sparkfun.com/tutorials/setting-up-raspbian-and-doom/all"
+         }, {
+            "date_added": "13262617049360146",
+            "guid": "ac71221b-9180-4e76-8fda-ed5ee23c4bff",
+            "id": "12",
+            "name": "W3Schools Online Web Tutorials",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.w3schools.com/default.asp"
+         }, {
+            "date_added": "13262617049345145",
+            "guid": "726b92d9-a20d-49f1-a05b-4802a1572c34",
+            "id": "13",
+            "name": "Yahoo",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.yahoo.com/"
+         }, {
+            "children": [ {
+               "date_added": "13262617049447153",
+               "guid": "6dffb9a1-fda4-46f3-a253-ba50dd0e575c",
+               "id": "15",
+               "name": "C general editor(C) - Online editor and compiler",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "https://paiza.io/projects/bCSI_0C8FMtYkD8_NE6EDg"
+            } ],
+            "date_added": "13289728903843332",
+            "date_modified": "0",
+            "guid": "18a5a640-8b2a-4d45-981a-aec1404cc4d0",
+            "id": "14",
+            "name": "program",
+            "source": "import_fre",
+            "type": "folder"
+         } ],
+         "date_added": "13289728898874362",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favourites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13262617049477157",
+            "guid": "258b4f47-74da-4310-87fe-6f46f6e1640c",
+            "id": "16",
+            "name": "Introduction to Python",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.w3schools.com/python/python_intro.asp"
+         } ],
+         "date_added": "13289728898874372",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favourites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13289728898874377",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favourites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

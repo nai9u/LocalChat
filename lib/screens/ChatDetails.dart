@@ -179,10 +179,8 @@ class _ChatDetailsState extends State<ChatDetails> {
                     if(formKey.currentState!.validate())
                       {
                         addSender(widget.receiverEmail);
-                        addMessage(messageController.text);
-                        // addCurrentMessage(messageController.text);
-                        // addSenderMessage(messageController.text);
-                        // getAlldata();
+                        addTime(widget.receiverEmail);
+                        addMessage(messageController.text);                      
                         messageController.clear();
                       }
                   }, 
@@ -233,7 +231,19 @@ class _ChatDetailsState extends State<ChatDetails> {
     }
     );
   }
-
+  
+  addTime(String receiverEmail) async{
+    await firestore
+    .collection(currentEmail)
+    .doc(receiverEmail).update({
+      'timestamp': FieldValue.serverTimestamp(),
+    });
+    await firestore
+    .collection(receiverEmail)
+    .doc(currentEmail).update({
+      'timestamp': FieldValue.serverTimestamp(),
+    });
+}
   void inputData() { 
     final User? user = auth.currentUser;
     currentEmail = user!.email.toString();

@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:local_chat/screens/splash_screen.dart';
 
 Future<void> main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+  if(kIsWeb){
   // if(Firebase.apps.isEmpty){
    await Firebase.initializeApp(
     options: FirebaseOptions(
@@ -16,13 +18,15 @@ Future<void> main() async {
         databaseURL: "https://{local-chat-a188b}.firebaseio.com",
         messagingSenderId: "593137938519",
       )
-    );
+    ).whenComplete(() => runApp(MyApp()));
+  }
     // .whenComplete(() =>   runApp(MyApp()));
+    // runApp(MyApp());
+  // }
+  else {
+    Firebase.initializeApp();
     runApp(MyApp());
-  // }
-  // else {
-  //   runApp(MyApp());
-  // }
+  }
 }
 
 class MyApp extends StatelessWidget {

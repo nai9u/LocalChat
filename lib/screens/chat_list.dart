@@ -93,11 +93,6 @@ class _ChatListState extends State<ChatList> {
             ),
             Divider(),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-            ),
-            Divider(),
-            ListTile(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutApp()));
               },
@@ -188,7 +183,7 @@ class _ChatListState extends State<ChatList> {
                   Container(
                     height: MediaQuery.of(context).size.height*0.75,
                     child: StreamBuilder<QuerySnapshot>(
-                      stream: firestore2.collection(currentEmail).orderBy('timestamp',descending: false).snapshots(),
+                      stream: firestore2.collection(currentEmail).orderBy('timestamp',descending: true).snapshots(),
                       builder: (context,snapshot){
                         if(snapshot.hasError){
                           return Text('Something went wrong');

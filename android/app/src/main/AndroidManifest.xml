@@ -2,9 +2,9 @@
     package="com.example.local_chat">
     <uses-permission android:name="Android.permission.INTERNET"/>
     <application
-        android:label="local_chat"
+        android:label="LocalChat"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/local_chat">
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -40,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 tag: 'title',
                 child: Material(
                   color: Colors.transparent,
-                  child: Text('Chatting App',
+                  child: Text('Local Chat',
                     style:TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold

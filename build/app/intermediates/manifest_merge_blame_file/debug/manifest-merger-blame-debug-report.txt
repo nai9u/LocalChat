@@ -35,8 +35,8 @@
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.6.0] C:\Users\naina\.gradle\caches\transforms-2\files-2.1\6f6da31ded36fd59bf0fb59f8c9437af\core-1.6.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
-25        android:icon="@mipmap/ic_launcher"
-26        android:label="local_chat" >
+25        android:icon="@mipmap/local_chat"
+26        android:label="LocalChat" >
 27        <activity
 28            android:name="com.example.local_chat.MainActivity"
 29            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

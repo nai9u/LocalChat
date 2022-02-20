@@ -85,7 +85,7 @@ class _LogInScreenState extends State<LogInScreen>
                         ),
                         TextFormField(
                           decoration: InputDecoration(
-                            hintText: 'Email or Mobile No.',
+                            hintText: 'Email',
                           ),
                           controller: emailController,
                           validator: (value) {

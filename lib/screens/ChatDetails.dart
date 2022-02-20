@@ -38,73 +38,41 @@ class _ChatDetailsState extends State<ChatDetails> {
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
-        toolbarHeight: 70,
         leading: IconButton(
           onPressed: (){
             Navigator.pop(context);
           }, 
           icon: Icon(Icons.arrow_back_ios)
         ),
-        title: Expanded(
-          child: Row(
-            children: [
-              CircleAvatar(
-                foregroundColor: Colors.red,
-                maxRadius: 25,
-              ),
-              SizedBox(width: 20,),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    widget.receiverName,
-                    style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w600),
-                  ),
-                  // SizedBox(
-                  //   height: 6,
-                  // ),
-                  // Text(
-                  //   "Online",
-                  //   style: TextStyle(
-                  //       color: Colors.grey.shade600, fontSize: 13),
-                  // ),
-                ],
-              ),
-            ],
-          ),
+        title:Text(
+          widget.receiverName,
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.w600),
         ),
+        centerTitle: true,
         backgroundColor: color1,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.settings, color: Colors.black54),
-            onPressed: () {
-            },
-          ),
-        ]
       ),
       body: Container(
         color: color2,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            StreamBuilder(
-              stream: firestore.collection(currentEmail).doc(widget.receiverEmail).collection('Chats').orderBy('timestamp', descending: true).snapshots(),
-              builder: (context, AsyncSnapshot<QuerySnapshot> snapshot){
-                if(snapshot.hasError){
-                  return Text('Something went wrong');
-                }
-                if (!snapshot.hasData){
-                  return Center(child: CircularProgressIndicator());
-                }
-                else{
-                  var data = snapshot.data!.docs;
-                  int lengthR = data.length;
-                  return Expanded(
-                    child: ListView.builder(
+            Expanded(
+              child: StreamBuilder(
+                stream: firestore.collection(currentEmail).doc(widget.receiverEmail).collection('Chats').orderBy('timestamp', descending: true).snapshots(),
+                builder: (context, AsyncSnapshot<QuerySnapshot> snapshot){
+                  if(snapshot.hasError){
+                    return Text('Something went wrong');
+                  }
+                  if (!snapshot.hasData){
+                    return Center(child: CircularProgressIndicator());
+                  }
+                  else{
+                    var data = snapshot.data!.docs;
+                    int length = data.length;
+                    return ListView.builder(
                       reverse: true,
-                      itemCount: lengthR,
+                      itemCount: length,
                       itemBuilder: (context,i){
                         (currentEmail == data[i]['sender'])? isMe = true: isMe= false;
                         return Align(
@@ -130,6 +98,7 @@ class _ChatDetailsState extends State<ChatDetails> {
                                   data[i]['Msg'],
                                   style: TextStyle(
                                     color: isMe==false ? color1 : Colors.white,
+                                    fontWeight: FontWeight.bold,
                                     fontSize: 15.0,
                                   ),
                                 ),
@@ -138,10 +107,10 @@ class _ChatDetailsState extends State<ChatDetails> {
                           ),
                         );
                       }
-                    ),
-                  );
-                }
-              },
+                    );
+                  }
+                },
+              ),
             ),
 
             Row(
@@ -180,7 +149,8 @@ class _ChatDetailsState extends State<ChatDetails> {
                       {
                         addSender(widget.receiverEmail);
                         addTime(widget.receiverEmail);
-                        addMessage(messageController.text);                      
+                        addMessage(messageController.text);
+                      
                         messageController.clear();
                       }
                   }, 
@@ -194,7 +164,8 @@ class _ChatDetailsState extends State<ChatDetails> {
       ),
     );
   }
-
+// var timeformat = DateTime.now().hour.toString() + ':'+ DateTime.now().minute.toString();
+// var dateformat = DateTime.now().day.toString() + '/'+ DateTime.now().month.toString()+ '/'+ DateTime.now().year.toString();
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   addMessage(String message) async{
     await firestore
@@ -220,7 +191,6 @@ class _ChatDetailsState extends State<ChatDetails> {
         }
       );
   }
-
   addSender(String receiverEmail) async{
     await firestore
     .collection(receiverEmail)

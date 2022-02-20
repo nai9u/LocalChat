@@ -24,7 +24,7 @@ Future<void> main() async {
     // runApp(MyApp());
   // }
   else {
-    Firebase.initializeApp();
+    await Firebase.initializeApp();
     runApp(MyApp());
   }
 }
@@ -37,9 +37,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: SplashScreen(),
     );
   }

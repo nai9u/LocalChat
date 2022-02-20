@@ -26,7 +26,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var _otpController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    timeDilation = 2;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -251,13 +250,13 @@ FirebaseFirestore firestore = FirebaseFirestore.instance;
 var userName = '';
 var userEmail = '';
 addUserData(String name,String email,String mobile) async{
- return await firestore
- .collection('Users')
- .doc(email)
- .set({
-     "Name" : name,
-     'Email' : email,
-     'Mobile': mobile
-  });
-}
+  return await firestore
+  .collection('Users')
+  .doc(email)
+  .set({
+      "Name" : name,
+      'Email' : email,
+      'Mobile': mobile
+    });
+  }
 }

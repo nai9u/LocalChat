@@ -16,7 +16,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  final bool _isVisible = false;
+  // final bool _isVisible = false;
   User? loggedInUser;
   bool data = false ;
 
@@ -61,38 +61,10 @@ class _SplashScreenState extends State<SplashScreen> {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: AnimatedOpacity(
-          opacity: _isVisible ? 1 : 0,
-          duration: Duration(milliseconds: 2500),
-          child: Center(
-            child: Container(
-              height: 160,
-              width: 160,
-              child: Center(
-                child: Hero(
-                  tag: 'title',
-                  child: Material(
-                    color: Colors.transparent,
-                    child: Text(
-                      'Local Chat',
-                      style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-            ),
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.black,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.white,
-                    blurRadius: 2.0,
-                    offset: Offset(5, 3),
-                    spreadRadius: 2,
-                  ),
-                ],
-              ),
-            ),
+        child: Center(
+          child: Text(
+            'Local Chat',
+            style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
         ),
       ),

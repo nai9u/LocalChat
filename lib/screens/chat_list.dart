@@ -15,7 +15,7 @@ class ChatList extends StatefulWidget {
   @override
   _ChatListState createState() => _ChatListState();
 }
-bool darkMode = true;
+bool darkMode = false;
 
 class _ChatListState extends State<ChatList> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
@@ -40,8 +40,10 @@ class _ChatListState extends State<ChatList> {
     var textFieldColor = darkMode == false ? Colors.grey[300] : Colors.white12;
     FirebaseFirestore firestore2 = FirebaseFirestore.instance;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text('Chats'),
+        titleTextStyle: TextStyle(fontSize: 30),
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: color1,
@@ -147,115 +149,133 @@ class _ChatListState extends State<ChatList> {
         ),
       ),
       key: scaffoldKey,
-      body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          color: color2,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Search...",
-                    hintStyle: TextStyle(color: Colors.grey[600]),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Colors.grey.shade600,
-                      size: 20,
-                    ),
-                    filled: true,
-                    fillColor: textFieldColor,
-                    contentPadding: EdgeInsets.all(8),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide:
-                        BorderSide(color: Colors.transparent)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide:
-                        BorderSide(color: Colors.transparent)),
-                  )
-                ),
-              ),
-              Stack(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height*0.75,
-                    child: StreamBuilder<QuerySnapshot>(
-                      stream: firestore2.collection(currentEmail).orderBy('timestamp',descending: true).snapshots(),
-                      builder: (context,snapshot){
-                        if(snapshot.hasError){
-                          return Text('Something went wrong');
-                        }
-                        if (!snapshot.hasData){
-                          return Center(child: CircularProgressIndicator());
-                        }
-                        else{
-                          final data = snapshot.data!.docs;
-                          return Expanded(
-                            child: ListView.builder(
-                              itemCount: data.length,
-                              itemBuilder: (context,index){
-                                return ListTile(
-                                  onTap: (){
-                                    Navigator.push(
-                                      context, 
-                                      MaterialPageRoute(builder: (context)=>
-                                        ChatDetails(
-                                          receiverName: data[index].get("Name"),
-                                          receiverEmail: data[index].get("Email"),
-                                        )
-                                      )
-                                    );
-                                  },
-                                  leading: CircleAvatar(
-                                    radius: 20,
-                                  ),
-                                  title: Text(
-                                    data[index].get('Name'),
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: color1,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  subtitle: Text(
-                                    data[index].get('Email'),
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: Colors.grey.shade600,
-                                      // fontWeight: widget.isMessageRead?FontWeight.bold:FontWeight.normal),
-                                    ),
-                                  ),
-                                );
-                              }
-                            ),
-                          );
-                        }
-                      },
-                    ),
-                  ),
-                  
-                  Positioned(
-                    bottom: 40,
-                    right: 40,
-                    child: FloatingActionButton(
-                      backgroundColor: color1,
-                      child: Icon(
-                        Icons.add,
-                        color: color2,
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        color: color2,
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "Search...",
+                      hintStyle: TextStyle(color: Colors.grey[600]),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.grey.shade600,
+                        size: 20,
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context, 
-                          MaterialPageRoute(builder: (context)=>AllUser())
+                      filled: true,
+                      fillColor: textFieldColor,
+                      contentPadding: EdgeInsets.all(8),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide:
+                          BorderSide(color: Colors.transparent)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide:
+                          BorderSide(color: Colors.transparent)),
+                    )
+                  ),
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height*0.72,
+                  child: StreamBuilder<QuerySnapshot>(
+                    stream: firestore2.collection(currentEmail).orderBy('timestamp',descending: true).snapshots(),
+                    builder: (context,snapshot){
+                      if(snapshot.hasError){
+                        return Text('Something went wrong');
+                      }
+                      if (!snapshot.hasData){
+                        return Center(child: CircularProgressIndicator());
+                      }
+                      else{
+                        final data = snapshot.data!.docs;
+                        // var time = DateFormat('MM/dd/yyyy, hh:mm a');
+                        // var timeformat = DateTime.now().hour.toString() + ':'+ DateTime.now().minute.toString();
+                        // var dateformat = DateTime.now().day.toString() + '/'+ DateTime.now().month.toString()+ '/'+ DateTime.now().year.toString();
+                        return ListView.builder(
+                          itemCount: data.length,
+                          itemBuilder: (context,index){
+                            return ListTile(
+                              onTap: (){
+                                Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(builder: (context)=>
+                                    ChatDetails(
+                                      receiverName: data[index].get("Name"),
+                                      receiverEmail: data[index].get("Email"),
+                                    )
+                                  )
+                                );
+                              },
+                              leading: CircleAvatar(
+                                radius: 25,
+                                // child: Text(currentUserName[0]),
+                              ),
+                              title: Text(
+                                data[index].get('Name'),
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: color1,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              subtitle: Text(
+                                data[index].get('Email'),
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                  // fontWeight: widget.isMessageRead?FontWeight.bold:FontWeight.normal),
+                                ),
+                              ),
+                              // trailing: Column(
+                              //   mainAxisAlignment: MainAxisAlignment.center,
+                              //   children: [
+                              //     Text(
+                              //       data[index].get('time'),
+                              //       style: TextStyle(
+                              //         color: Colors.grey,
+                              //         fontSize: 13
+                              //       ),
+                              //     ),
+                              //     Text(
+                              //       data[index].get('date'),
+                              //       style: TextStyle(
+                              //         color: Colors.grey,
+                              //         fontSize: 13
+                              //       ),
+                              //     )
+                              //   ],
+                              // ),
+                            );
+                          }
                         );
-                      },
-                    ))
-                ],
-              )
-            ],
-          ),
+                      }
+                    },
+                  ),
+                )
+              ],
+            ),
+            Positioned(
+                  bottom: 40,
+                  right: 40,
+                  child: FloatingActionButton(
+                    backgroundColor: color1,
+                    child: Icon(
+                      Icons.add,
+                      color: color2,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context)=>AllUser())
+                      );
+                    },
+                  ))
+          ],
         ),
       ),
     );
@@ -265,7 +285,7 @@ class _ChatListState extends State<ChatList> {
     final User? user = auth.currentUser;
     currentEmail = user!.email.toString();
   }
-  
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   
   Future getCurrentData() async{

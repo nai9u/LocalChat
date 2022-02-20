@@ -42,54 +42,49 @@ class _AllUserState extends State<AllUser> {
       ),
       body: Container(
         color: color2,
-        child: SafeArea(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: StreamBuilder<QuerySnapshot>(
-              stream: firestore3.collection('Users').where('Email',isNotEqualTo: currentEmail).snapshots(),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  return Text('Something went wrong');
-                }
-                if (!snapshot.hasData) {
-                  return Center(child: CircularProgressIndicator());
-                } 
-                else {
-                  final data = snapshot.data!.docs;
-                  return Expanded(
-                    child: ListView.builder(
-                      itemCount: data.length,
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          onTap: (){
-                            addSender(data[index].get('Email'));
-                          },
-                          leading: CircleAvatar(
-                            radius: 20,
-                          ),
-                          title: Text(
-                            data[index].get('Name'),
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: color1,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text(
-                            data[index].get('Email'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey.shade600,
-                              // fontWeight: widget.isMessageRead?FontWeight.bold:FontWeight.normal),
-                            ),
-                          ),
-                        );
-                      }
+        height: MediaQuery.of(context).size.height,
+        child: StreamBuilder<QuerySnapshot>(
+          stream: firestore3.collection('Users').where('Email',isNotEqualTo: currentEmail).snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return Text('Something went wrong');
+            }
+            if (!snapshot.hasData) {
+              return Center(child: CircularProgressIndicator());
+            } 
+            else {
+              final data = snapshot.data!.docs;
+              return ListView.builder(
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    onTap: (){
+                      addSender(data[index].get('Email'));
+                    },
+                    leading: CircleAvatar(
+                      radius: 20,
+                      // child: Text(currentUserName[0]),
+                    ),
+                    title: Text(
+                      data[index].get('Name'),
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: color1,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      data[index].get('Email'),
+                      style: TextStyle(
+                        fontSize: 13,
+                        color: Colors.grey.shade600,
+                        // fontWeight: widget.isMessageRead?FontWeight.bold:FontWeight.normal),
+                      ),
                     ),
                   );
                 }
-              },
-            ),
-          ),
+              );
+            }
+          },
         ),
       ),
     );
@@ -112,7 +107,8 @@ class _AllUserState extends State<AllUser> {
       });
     }
 
-
+// var timeformat = DateTime.now().hour.toString() + ':'+ DateTime.now().minute.toString();
+// var dateformat = DateTime.now().day.toString() + '/'+ DateTime.now().month.toString()+ '/'+ DateTime.now().year.toString();
   addSender(String receiverEmail) async{
     await firestore
     .collection('Users')
@@ -129,12 +125,5 @@ class _AllUserState extends State<AllUser> {
       'Email':receiverEmail,
       'timestamp': FieldValue.serverTimestamp(),
     });
-    // await firestore
-    // .collection(receiverEmail)
-    // .doc(currentEmail).set({
-    //   'Name': currentUserName,
-    //   'Email': currentEmail,
-    //   'timestamp': FieldValue.serverTimestamp(),
-    // });
   }
 }
